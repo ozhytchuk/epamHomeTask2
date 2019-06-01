@@ -42,10 +42,10 @@ function findNumInArray($array, $findNum)
     $newArray = [];
     for ($i = 0; $i < count($array); $i++) {
         $splitNum = str_split($array[$i]);
-        array_push($arrayNums, $splitNum);
+        $arrayNums[] = $splitNum;
         for ($j = 0; $j < count($arrayNums); $j++) {
             if ($arrayNums[$i][$j] == $findNum) {
-                array_push($newArray, $array[$i]);
+                $newArray[] = $array[$i];
                 break;
             }
         }
@@ -63,7 +63,7 @@ function countNums($array, $findNum)
     $count = 0;
     for ($i = 0; $i < count($array); $i++) {
         $splitNum = str_split($array[$i]);
-        array_push($arrayNums, $splitNum);
+        $arrayNums[] = $splitNum;
         for ($j = 0; $j < count($array); $j++) {
             if ($arrayNums[$i][$j] == $findNum) {
                 $count++;
@@ -124,5 +124,6 @@ function charsMapping($str)
                 $newStr .= $str[$i];
         }
     }
+
     return $newStr;
 }

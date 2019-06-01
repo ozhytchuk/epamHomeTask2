@@ -11,6 +11,7 @@ class CharsMappingTest extends TestCase
         return [
             ['ATTGC', 'TAACG'],
             ['GTAT', 'CATA'],
+            ['hello', 'hello'],
         ];
     }
 
